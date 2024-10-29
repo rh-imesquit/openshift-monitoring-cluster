@@ -34,10 +34,12 @@ oc create token grafana-sa --duration=8760h -n openshift-monitoring
 ```
 The *--duration=8760h* option specifies that this token should be valid for **one year**.
 
-==**Important:** Save this token, as it will be needed later.==
+**Important: Save this token, as it will be needed later.**
 
 
 #### Deploying Grafana
+
+For this lab, we will use the Red Hat OpenShift observability stack, which currently consists of Grafana, Prometheus, Thanos Querier, and Alert Manager. Of these, only Alert Manager is outside the proposed scope.
 
 >**[Grafana](https://grafana.com/)** is an open-source analytics and monitoring platform that allows users to visualize and analyze data from multiple sources, such as Prometheus, InfluxDB, Elasticsearch, and others, in real-time. It offers an intuitive interface to create custom dashboards with graphs, charts, and alerts, making it easy to monitor infrastructure, application performance, and business metrics. Grafana supports flexible data queries, customizable visualizations, and integrations with various tools, making it a popular choice for organizations looking to centralize observability and gain insights from their data.
 
