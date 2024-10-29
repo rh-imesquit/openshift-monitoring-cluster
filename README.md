@@ -1,1 +1,12 @@
-# openshift-monitoring-cluster
+# Red Hat OpenShift Monitoring Cluster Resources
+
+This repository was created out of the need to **monitor resources in Red Hat OpenShift clusters** in a customized way.
+
+Monitoring OpenShift cluster resources using Grafana is essential to ensure the environment's performance, stability, and operational efficiency.
+
+This practice offers several benefits:
+
+* Real-time visibility: Grafana provides an intuitive visual interface that allows for real-time cluster metrics monitoring.
+* Problem detection and resolution: Continuous monitoring helps identify potential issues before they impact services.
+* Enhanced operational efficiency: Detailed monitoring allows for optimized resource usage.
+* Support for data-driven decision-making: With Grafana, decisions on scalability and resource allocation can be made based on real data and accurate metrics.
