@@ -63,20 +63,18 @@ Go to the side menu and *click on **Connections** > **Data sources***. Click on 
 
 We will fill out the form with the necessary information to establish the connection with Red Hat OpenShift's Prometheus.
 
-* Name
-* Prometheus server URL
-* Authentication methods
-* Skip TLS certificate validation
-* HTTP Headers
-* Click on the Save & test button
+| Form                                 |    Value     |
+| ----------------                 | ------- |
+| Prometheus server URL            | *https://<**thanos-querier-service-hostname**>:9091*    |
+| Authentication methods           | *No Authentication*     |
+| Skip TLS certificate validation  | *Checked*    |
+| HTTP Headers                     | *Authorization : Bearer + service account token*    |
 
-Para encontrar o host do thanos querier, execute o seguinte comando:
+To find the Thanos Querier hostname, go to the openshift-monitoring project, navigate to the side menu **Networking** > **Services**, and locate the thanos-querier service.
 
-```bash
-oc expose service grafana-service -n openshift-monitoring
-```
+![](images/openshift-thanos-querier-service.png)
 
-The connection should have been successfully established.
+After filling out the form with the required information, click on the Save & test button and the connection should have been successfully established.
 
 ![](images/grafana-success-connection.png)
 
