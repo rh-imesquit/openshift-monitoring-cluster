@@ -16,6 +16,8 @@ This practice offers several benefits:
 
 Before starting the lab, it is necessary to ensure that a user with the required permissions is logged into Red Hat OpenShift (console and cli).
 
+### Establishing Grafana permissions
+
 Let's create a service account so that Grafana can securely access resources (e.g., Prometheus) in the openshift-monitoring namespace.
 ```bash
 oc create serviceaccount grafana-sa -n openshift-monitoring
@@ -37,7 +39,7 @@ The *--duration=8760h* option specifies that this token should be valid for **on
 **Important: Save this token, as it will be needed later.**
 
 
-#### Deploying Grafana
+### Deploying Grafana
 
 For this lab, we will use the Red Hat OpenShift observability stack, which currently consists of Grafana, Prometheus, Thanos Querier, and Alert Manager. Of these, only Alert Manager is outside the proposed scope.
 
@@ -106,3 +108,10 @@ Below are examples of the dashboards in operation.
 
 
 ![](images/dashboard-views-nodes-list.png)
+
+
+### References
+
+- [Red Hat OpenShift Container Platform 4.16 Documentation - About OpenShift Container Platform monitoring](https://docs.openshift.com/container-platform/4.16/observability/monitoring/monitoring-overview.html)
+
+- [Custom Grafana dashboards for Red Hat OpenShift Container Platform 4](https://www.redhat.com/en/blog/custom-grafana-dashboards-red-hat-openshift-container-platform-4)
