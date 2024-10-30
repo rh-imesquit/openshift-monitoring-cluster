@@ -748,7 +748,7 @@
             "type": "prometheus",
             "uid": "${datasource}"
           },
-          "expr": "count(kube_namespace_created{cluster=\"$cluster\"})",
+          "expr": "count(kube_namespace_labels{cluster=\"$cluster\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
